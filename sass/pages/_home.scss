@@ -1,0 +1,90 @@
+.section-about {
+  padding: 14.4rem 0;
+}
+
+.section-business {
+  padding: 14.4rem 0;
+  background-image: linear-gradient(rgba($black, .75), rgba($black, .75)) ,url("../img/city-lights.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.business-desc {
+
+  &__box {
+    &:not(:last-of-type) {
+      @include respond(desktop) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+.section-works {
+  padding: 14.4rem 0;
+}
+
+.section-recruit {
+  padding: 14.4rem 0;
+  background-image: linear-gradient(rgba($black, .85), rgba($black, .85)), url("../img/02-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.recruit-list {
+  padding: 5.6rem 0;
+  border-bottom: 1px solid $white;
+  display: grid;
+  grid-template-columns: 35% 55%;
+  gap: 10%;
+
+  @include respond(tab) {
+    grid-template-columns: 25% 65%;
+    gap: 10%;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+  
+  &:first-of-type {
+    border-top: 1px solid $white;
+  }
+
+  &__term {
+    font-weight: 700;
+    justify-self: flex-end;
+    @include respond(phone) {
+      justify-self: center;
+    }
+  }
+
+  &__desc {
+    @include respond(phone) {
+      justify-self: center;
+    }
+  }
+
+  &__list {
+    text-indent: 2rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $white;
+  }
+}
+
+.section-company {
+  padding: 14.4rem 0;
+}
+
+.section-contact {
+  padding: 14.4rem 0;
+  background-color: $black;
+}

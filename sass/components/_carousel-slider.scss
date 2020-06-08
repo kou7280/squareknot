@@ -1,0 +1,53 @@
+.carousel-slider {
+  margin-bottom: 5.6rem;
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    color: $white;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba($black, .6), rgba($black, .25), transparent);
+    opacity: 0;
+    transition: all .2s;
+  }
+
+  &__link:hover &__overlay {
+    opacity: 1;
+  }
+
+  &__photo {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    opacity: 0;
+    transition: all .2s;
+  }
+
+  &__item:hover &__info {
+    opacity: 1;
+  }
+
+  &__name {
+    font-size: 2.4rem;
+    display: block;
+    letter-spacing: 3px;
+  }
+
+  &__station {
+    letter-spacing: 1.8px;
+  }
+}

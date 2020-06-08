@@ -1,0 +1,19 @@
+.business-box {
+
+  border: 1px solid $white;
+  padding: 3rem 0;
+
+  @include respond(desktop) {
+    margin-bottom: 2rem;
+  }
+
+  &__icon {
+    color: $white;
+    font-size: 6rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    color: $white;
+  }
+}

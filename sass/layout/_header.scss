@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right top, rgba($primary, .75), rgba($secondary, .75));
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

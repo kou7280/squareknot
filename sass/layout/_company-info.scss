@@ -1,0 +1,24 @@
+.company-info {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  &__ttl {
+    width: 25%;
+    
+  }
+
+  &__desc {
+    width: 75%;
+  }
+
+  &__list {
+    text-indent: 2rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: block;
+    color: inherit;
+  }
+}

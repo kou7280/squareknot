@@ -1,0 +1,21 @@
+.footer {
+  background-color: $black;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  text-align: center;
+
+
+  &__logo {
+    width: 21.4rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  &__copy {
+    color: $white;
+    @include respond(tab) {
+      font-size: 1rem;
+    }
+  }
+}

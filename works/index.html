@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700|Roboto+Mono:300,700|Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <a href="../index.html" class="close-button"></a>
+    
+    <section class="section-gallery">
+      <div class="u-mb-sm u-text-center">
+        <h2 class="heading-secondary">Works</h2>
+      </div>
+      <div class="container">
+        <nav class="nav-category u-mb-xs">
+          <ul class="nav-category__list">
+            <li class="nav-category__item filter" data-filter="all">
+                すべて見る
+            </li>
+            <li class="nav-category__item filter" data-filter=".regular"> 
+                レギュラー番組
+            </li>
+            <li class="nav-category__item filter" data-filter=".outsourcing">
+                業務委託番組
+            </li>
+            <li class="nav-category__item filter" data-filter="">
+                WEB動画
+            </li>
+            <li class="nav-category__item filter" data-filter="">
+                過去の実績
+            </li>
+          </ul>
+        </nav>
+        <ul class="gallery-list" id="container">
+          <li class="gallery-list__item mix all regular">
+            <a href="https://www.bs-asahi.co.jp/100nen/" class="gallery-list__link" target="_blank">
+              <span class="gallery-list__overlay"></span>
+              <img class="gallery-list__photo" src="../img/meika.jpg" alt="">
+              <div class="gallery-list__info">
+                <span class="gallery-list__name">百年名家</span>
+                <span class="gallery-list__station">BS朝日</span>
+              </div>
+            </a>
+          </li>
+          <li class="gallery-list__item mix all regular">
+            <a href="https://www.bs-tvtokyo.co.jp/cinema/addict.html" class="gallery-list__link" target="_blank">
+              <span class="gallery-list__overlay"></span>
+              <img class="gallery-list__photo" src="../img/cinemaaddict.jpg" alt="">
+              <div class="gallery-list__info">
+                <span class="gallery-list__name">シネマアディクト</span>
+                <span class="gallery-list__station">BSテレ東</span>
+              </div>
+            </a>
+          </li>
+          <li class="gallery-list__item mix all outsourcing">
+            <a href="http://www6.nhk.or.jp/special/" class="gallery-list__link" target="_blank">
+              <span class="gallery-list__overlay"></span>
+              <img class="gallery-list__photo" src="../img/nhkspecial.jpg" alt="">
+              <div class="gallery-list__info">
+                <span class="gallery-list__name">NHKスペシャル</span>
+                <span class="gallery-list__station">NHK</span>
+              </div>
+            </a>
+          </li>
+          <li class="gallery-list__item mix all outsourcing">
+            <a href="http://www.nhk.or.jp/sukusuku/" class="gallery-list__link" target="_blank">
+              <span class="gallery-list__overlay"></span>
+              <img class="gallery-list__photo" src="../img/sukusuku.jpg" alt="">
+              <div class="gallery-list__info">
+                <span class="gallery-list__name">すくすく子育て</span>
+                <span class="gallery-list__station">NHK Eテレ</span>
+              </div>
+            </a>
+          </li>
+          <li class="gallery-list__item mix all outsourcing">
+            <a href="https://www.fujitv.co.jp/livenews_it/" class="gallery-list__link" target="_blank">
+              <span class="gallery-list__overlay"></span>
+              <img class="gallery-list__photo" src="../img/livenewsit.png" alt="">
+              <div class="gallery-list__info">
+                <span class="gallery-list__name">Live News it!</span>
+                <span class="gallery-list__station">フジテレビ</span>
+              </div>
+            </a>
+          </li>
+          <li class="gallery-list__gap"></li>
+          <li class="gallery-list__gap"></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="/">
+      <img src="../img/squareknot_logo-white.png" alt="ロゴ" class="footer__logo">
+    </a>
+    <small class="footer__copy">Copyright &copy; 2020 SQUARE KNOT Co.,LTD. All Rights Reserved.</small>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <script src="../js/works.js"></script>
+</body>
+</html>

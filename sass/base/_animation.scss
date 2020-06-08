@@ -1,0 +1,55 @@
+@keyframes menu-bar-01-active {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(.8rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(.8rem) rotate(45deg);
+  }
+}
+
+@keyframes menu-bar-02-active {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-.8rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-.8rem) rotate(-45deg);
+  }
+}
+
+@keyframes menu-bar-01 {
+  0% {
+    transform: translateY(.8rem) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(.8rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes menu-bar-02 {
+  0% {
+    transform: translateY(-.8rem) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(-.8rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}

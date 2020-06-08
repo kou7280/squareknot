@@ -1,0 +1,233 @@
+.navigation {
+  height: 6.4rem;
+  width: 100%;
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $grey-extra-light;
+  border-top: 1px solid $grey-extra-light;
+  background-color: $white;
+  opacity: .95;
+
+  @include respond(desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  @include  respond(tab) {
+    padding: 0 3rem;
+    height: 5.5rem;
+  }
+
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  &__link {
+    z-index: 250;
+  }
+
+  &__logo {
+    width: 21.4rem;
+    height: 3.8rem;
+    
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    text-align: center;
+    cursor: pointer;
+    z-index: 250;
+    display: none;
+
+    @include respond(desktop) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top:2.5rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 3px;
+      background-color: $grey-dark;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 2s;
+    }
+
+    &::before {
+      top: -.8rem;
+      animation: menu-bar-01 .5s forwards;
+    }
+
+    &::after {
+      top:.8rem;
+      animation: menu-bar-02 .5s forwards;
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+    
+    &::before {
+      animation: menu-bar-01-active .5s forwards;
+    }
+
+    &::after {
+      animation: menu-bar-02-active .5s forwards;
+    }
+  }
+
+  &__background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($white, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    transform: translateX(-100%);
+    transition: transform .3s cubic-bezier(1,-0.01,0,.99);
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: translateX(0%);
+  }
+
+  &__nav {
+    height: 100%;
+    display: flex;
+    z-index: 200;
+    @include respond(desktop) {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s .1s;
+    };
+  }
+  
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    visibility: initial;
+  }
+
+  &__nav-list {
+    align-self: stretch;
+    display: flex;
+    @include respond(desktop) {
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    };
+
+    @include respond(tab) {
+      top: 50%;
+      left: 25%;
+    };
+
+    @include respond(phone) {
+      top: 50%;
+      left: 30%;
+    };
+  }
+
+  &__nav-item {
+    list-style: none;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    position: relative;
+    height: 100%;
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+      @include respond(desktop) {
+        margin-bottom: 3.2rem;
+      };
+    }
+
+
+    @include respond(desktop) {
+      font-size: 3.2rem;
+      font-weight: 300;
+    };
+  }
+
+  &__nav-link:link,
+  &__nav-link:visited {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    z-index: 100;
+
+  
+
+    @include respond(desktop) {
+      width: 100%;
+      justify-content: flex-start;
+    };
+  }
+
+  .active {
+    background-color: $grey-extra-light;
+    @include respond(desktop) {
+      background-color: transparent;
+    }
+  }
+
+  &__nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $grey-extra-light;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform .2s cubic-bezier(1,.01,0,.97), 
+                height .4s cubic-bezier(1,.01,0,.97) .2s;
+    z-index: -1;
+    @include respond(desktop) {
+      display: none;
+    };
+  }
+  &__nav-link:hover::before {
+    transform: scaleX(1);
+    height: 100%;
+  }
+}

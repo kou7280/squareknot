@@ -1,0 +1,163 @@
+.form {
+  width: 70%;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    width: 95%;
+  }
+  &__group {
+    position: relative;
+    margin-bottom: 4rem;
+
+    &:nth-of-type(3) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid $white;
+    color: $white;
+    appearance: none;
+    border-radius: 0;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $success;
+
+      &:focus:invalid {
+        border-bottom: 2px solid $danger;
+      }
+    }
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+  }
+
+  &__label {
+    font-size: 1.1rem;
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+    font-weight: 700;
+    display: block;
+    color: $white;
+    transition: all .2s;
+    cursor: text;
+
+    &--content {
+      top: -3rem;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    top: 1rem;
+    left: 1.5rem;
+    color: rgba($white, .4);
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  &__input:placeholder-shown {
+    border-bottom: 2px solid rgba($white, .4);
+  }
+
+  &__content-group {
+    position: relative;
+  }
+
+  &__textarea {
+    font-family: inherit;
+    padding: 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+    resize: none;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $success;
+
+      &:invalid {
+        border: 2px solid $danger;
+      }
+    }
+  }
+
+  &__textarea:placeholder-shown + &__label {
+    font-size: 1.4rem;
+    color: rgba($white, .4);
+    top: .8rem;
+    left: 1.2rem;
+    font-weight: 300;
+  }
+  &__textarea:placeholder-shown {
+    border: 2px solid rgba($white, .4);
+  }
+
+  &__checkbox-group {
+    position: relative;
+    margin-bottom: 3.2rem;
+  }
+
+  &__checkbox-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: none;
+    border: 2px solid rgba($white, .4);
+    border-radius: 2px;
+    vertical-align: -4px;
+    position: relative;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $white;
+    }
+
+    &:checked::after {
+      display: block;
+    }
+
+    &::after {
+      content: "\f14a";
+      font-family: "Font Awesome 5 Free";
+      color: white;
+      font-size: 1.8rem;
+      position: absolute;
+      left: -1.5px;
+      top: -4px;
+      display: none;
+    }
+
+  }
+
+  &__checkbox-label {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    color: $white;
+    font-weight: 500;
+    letter-spacing: 3px;
+  }
+
+  &__checkbox-link {
+    color: $white;
+  }
+
+  &__button-group {
+    text-align: center;
+  }
+}

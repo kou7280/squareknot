@@ -1,0 +1,47 @@
+.btn {
+
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.2rem 5rem;
+    font-size: 1.6rem;
+    font-family: $font-family-monospace;
+    letter-spacing: 3.5px;
+    transition: all .2s;
+    font-weight: inherit;
+
+    // Changes for <button> element
+    cursor: pointer;
+    background-color: transparent;
+
+    
+
+  }
+
+  &--white {
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $grey-dark;
+      outline: none;
+    }
+  }
+
+  &--black {
+    border: 1px solid $black;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      background-color: $black;
+      color: $white;
+      outline: none;
+    }
+  }
+}

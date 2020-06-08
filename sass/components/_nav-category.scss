@@ -1,0 +1,31 @@
+.nav-category {
+  display: flex;
+  justify-content: center;
+  
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+    letter-spacing: 2px;
+
+
+  }
+
+  &__item {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 1.4rem;
+    transition: opacity .2s;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    opacity: .6;
+    border-bottom: 1px solid $grey-extra-light;
+  }
+
+}
